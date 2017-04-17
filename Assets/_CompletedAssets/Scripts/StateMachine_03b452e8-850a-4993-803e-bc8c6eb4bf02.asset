@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6551a5c0290a8490e90a33ee4b0fdbb3, type: 3}
+  m_Name: StateMachine_LightOnOff
+  m_EditorClassIdentifier: 
+  parentStateMachinePosition: {x: 0, y: 0}
+  anyStatePosition: {x: 0, y: 0}
+  exitPosition: {x: 0, y: 0}
+  _entryTransitions: []
+  _transitions: []
+  _anyStateTransitions: []
+  entryPosition: {x: 0, y: 0}
+  defaultState: {fileID: 11437652}
+  _stateMachines: []
+  _states:
+  - {fileID: 11445774}
+  - {fileID: 11436336}
+--- !u!114 &11408310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60780f6d90a2493d882daa69d2365f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializable: 1
+  __unityVariableReferencedInstanceID: 0
+  valueTypeSerialized: 0001000000ffffffff010000000000000004010000001f53797374656d2e556e69747953657269616c697a6174696f6e486f6c64657203000000044461746109556e697479547970650c417373656d626c794e616d650100010806020000002e77732e77696e782e756e6974792e73746174656d616368696e652e436f6e646974696f6e556e6974794576656e7404000000060300000046417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0b
+  __memberPath: LightOnConditionEvent
+  displayMode: 2
+  valueObjectSerialized: 
+  __instanceUnityObject: {fileID: 0}
+--- !u!114 &11420912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c32f8d0637f64c5bb5c154de15d77c2, type: 3}
+  m_Name: LightOn
+  m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11438900, guid: f3b02001cbb8c4d1f9a0437d8c45b36a, type: 2}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: ws.winx.unity.UnityEventEx, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11438900, guid: f3b02001cbb8c4d1f9a0437d8c45b36a, type: 2}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: ws.winx.unity.UnityEventEx, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  _transitions:
+  - {fileID: 11479062}
+--- !u!114 &11436336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e605e855efd4739bc8e574465bf78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: -132, y: -96, z: 0}
+  state: {fileID: 11420912}
+--- !u!114 &11437652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c32f8d0637f64c5bb5c154de15d77c2, type: 3}
+  m_Name: LightOff
+  m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11433552, guid: f3b02001cbb8c4d1f9a0437d8c45b36a, type: 2}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: ws.winx.unity.UnityEventEx, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11433552, guid: f3b02001cbb8c4d1f9a0437d8c45b36a, type: 2}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: ws.winx.unity.UnityEventEx, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  _transitions:
+  - {fileID: 11472212}
+--- !u!114 &11442750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc65a1635d6445ce87150b4f555f9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _conditions:
+  - {fileID: 11455408}
+  destinationState: {fileID: 11420912}
+  destinationStateMachine: {fileID: 0}
+  isExit: 0
+  isEntry: 0
+  isAnyState: 0
+  solo: 0
+  mute: 0
+--- !u!114 &11445702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60780f6d90a2493d882daa69d2365f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializable: 1
+  __unityVariableReferencedInstanceID: 0
+  valueTypeSerialized: 0001000000ffffffff010000000000000004010000001f53797374656d2e556e69747953657269616c697a6174696f6e486f6c64657203000000044461746109556e697479547970650c417373656d626c794e616d650100010806020000002e77732e77696e782e756e6974792e73746174656d616368696e652e436f6e646974696f6e556e6974794576656e7404000000060300000046417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0b
+  __memberPath: LightOnConditionEvent
+  displayMode: 2
+  valueObjectSerialized: 
+  __instanceUnityObject: {fileID: 11408924, guid: b572d55da0ecb4dcc8bc11ac68f97a94,
+    type: 2}
+--- !u!114 &11445774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e605e855efd4739bc8e574465bf78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+  state: {fileID: 11437652}
+--- !u!114 &11449330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9757c9377e941410ba6e50fe6fec77e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventUnityVariable: {fileID: 11408310}
+--- !u!114 &11455408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9757c9377e941410ba6e50fe6fec77e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventUnityVariable: {fileID: 11445702}
+--- !u!114 &11472212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc65a1635d6445ce87150b4f555f9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _conditions:
+  - {fileID: 11449330}
+  destinationState: {fileID: 11420912}
+  destinationStateMachine: {fileID: 0}
+  isExit: 0
+  isEntry: 0
+  isAnyState: 0
+  solo: 0
+  mute: 0
+--- !u!114 &11479062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc65a1635d6445ce87150b4f555f9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _conditions:
+  - {fileID: 11488688}
+  destinationState: {fileID: 11437652}
+  destinationStateMachine: {fileID: 0}
+  isExit: 0
+  isEntry: 0
+  isAnyState: 0
+  solo: 0
+  mute: 0
+--- !u!114 &11488688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9757c9377e941410ba6e50fe6fec77e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventUnityVariable: {fileID: 11494324}
+--- !u!114 &11494324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60780f6d90a2493d882daa69d2365f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializable: 1
+  __unityVariableReferencedInstanceID: 0
+  valueTypeSerialized: 0001000000ffffffff010000000000000004010000001f53797374656d2e556e69747953657269616c697a6174696f6e486f6c64657203000000044461746109556e697479547970650c417373656d626c794e616d650100010806020000002e77732e77696e782e756e6974792e73746174656d616368696e652e436f6e646974696f6e556e6974794576656e7404000000060300000046417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c0b
+  __memberPath: LightOffConditionEvent
+  displayMode: 2
+  valueObjectSerialized: 
+  __instanceUnityObject: {fileID: 0}
